@@ -37,17 +37,25 @@ function Dictionary() {
   return (
     <div>
       {/* Search bar */}
+      <label htmlFor="search-term">Search for a word:</label>
       <input
         type="text"
+        id="search-term"
         value={searchTerm}
         onChange={handleInputChange}
-        placeholder="Search for a word"
+        placeholder="Type a word here..."
       />
       {/* Search button */}
       <button onClick={handleSearch}>Search</button>
 
       {/* Display search result */}
-      <div> Defination: {searchResult}</div>
+      <div>
+        {searchResult ? (
+          <p>Definition: {searchResult}</p>
+        ) : (
+          <p>Start by typing a word and clicking 'Search'</p>
+        )}
+      </div>
     </div>
   );
 }
