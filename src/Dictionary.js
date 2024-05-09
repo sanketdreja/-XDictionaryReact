@@ -50,8 +50,9 @@ function Dictionary() {
 
       {/* Display search result */}
       <div>
+        <h2>Definition:</h2>
         {searchResult ? (
-          <p>Definition: {searchResult}</p>
+          <p> {searchResult}</p>
         ) : (
           <p>Start by typing a word and clicking 'Search'</p>
         )}
